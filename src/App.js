@@ -28,6 +28,7 @@ function App() {
     settested(data1.tested);
     setsource(data1.sourceUrl);
     setactive((data1.infected - (data1.recovered + data1.deceased))) ;
+    console.log(data1)
     const initialDailyData = await fetchdatadaily();
     setdaily(initialDailyData);
     console.log(data1);
