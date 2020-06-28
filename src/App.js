@@ -5,18 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import {fetchdata, fetchdatadaily } from './API';
 import {Header} from './Components/Header';
 import {Box} from './Components/Box';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 
 function App() { 
-  const useStyles = makeStyles((theme) => ({
-    
-    paper: {
-      padding: theme.spacing(2),
-      textAlign: 'center',
-      color: theme.palette.text.secondary,
-    },
-  }));
   
 
     const classes = useStyles();
@@ -28,6 +18,7 @@ function App() {
   let [source,setsource] = useState("");
   let [daily, setdaily]= useState([])
   let [activecases,setactive]=useState(0);
+
   //total pakistan cases
   let data1 = "";
   async function  x(){
@@ -122,7 +113,7 @@ function App() {
             </Grid>
         </Grid>
         <Pie data={data} />
-        <Line data={linedata} style="align:Center "/>
+        <Line data={linedata}/>
           
          
         
