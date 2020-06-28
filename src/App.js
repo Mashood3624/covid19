@@ -1,4 +1,4 @@
-import React , {useState, useEffect} from 'react';
+import React , {useState} from 'react';
 import './App.css';
 import {Pie ,Line} from 'react-chartjs-2';
 import Grid from '@material-ui/core/Grid';
@@ -8,8 +8,6 @@ import {Box} from './Components/Box';
 
 function App() { 
   
-
-    const classes = useStyles();
   // usestate data 
   let [death , setdeath] = useState(0);
   let [recovered , setrecovered] = useState(0);
